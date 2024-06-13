@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: sudo apt-get update && sudo apt-get install -y freeglut3-dev
+    command: g++ -o rubiks_cube main.cpp -lGL -lGLU -lglut
+
+ports:
+  - port: 6080
+    onOpen: open-preview
